@@ -50,13 +50,13 @@ services:
     labels:
       - "traefik.enable=true"
       # HTTPS
-      - "traefik.http.routers.omnicore.rule=Host(`kideco.gou.my.id`)"
+      - "traefik.http.routers.omnicore.rule=Host(`winalite.gou.my.id`)"
       - "traefik.http.routers.omnicore.entrypoints=websecure"
       - "traefik.http.routers.omnicore.tls=true"
       - "traefik.http.routers.omnicore.tls.certresolver=letsencrypt"
       - "traefik.http.services.omnicore.loadbalancer.server.port=3000"
       # HTTP → HTTPS redirect
-      - "traefik.http.routers.omnicore-http.rule=Host(`kideco.gou.my.id`)"
+      - "traefik.http.routers.omnicore-http.rule=Host(`winalite.gou.my.id`)"
       - "traefik.http.routers.omnicore-http.entrypoints=web"
       - "traefik.http.routers.omnicore-http.middlewares=redirect-to-https"
       - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
