@@ -32,7 +32,7 @@ export type DeepAnalyticsResponse = {
 
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, "") ??
-  "http://127.0.0.1:8000";
+  "";
 
 async function fetchApi<T>(path: string): Promise<T> {
   const response = await fetch(`${API_BASE_URL}${path}`, {

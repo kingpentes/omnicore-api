@@ -1,0 +1,9 @@
+.git
+__pycache__
+*.pyc
+node_modules
+.next
+out
+*.log
+database.sqlite
+.env*.local
